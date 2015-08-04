@@ -1,0 +1,54 @@
+it:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: reserve_it
+  pool: 5
+  username: postgres
+  password: password
+  host: localhost
+  port: 5432
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: reserve_it
+  pool: 5
+  username: postgres
+  password: password
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: reserve_test
+  pool: 5
+  username: postgres
+  password: password
+  host: localhost
+  port: 5432
+
+staging:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: reserve_uat
+  pool: 5
+  username: postgres
+  password: password
+  host: localhost
+  port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: reserve_demo
+  pool: 5
+  username: postgres
+  password: password
+  host: localhost
+  port: 5432ss
