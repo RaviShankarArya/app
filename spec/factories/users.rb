@@ -1,11 +1,13 @@
 FactoryGirl.define do
-  factory :user do
-    first_name "MyString"
-last_name "MyString"
-email "MyString"
-password_digest "MyString"
-phone "MyString"
-auth_token "MyString"
+  sequence(:email) {|n| "email_person_#{n.to_s.rjust(4, '0')}@yopmail.com" }
+  factory :user do |u|
+    first_name "Ravi"
+    last_name "Shankar"
+    u.email
+    password "Password123"
+    password_confirmation "Password123"
+    phone "990-191-6142"
+    auth_token "MyString"
   end
 
 end

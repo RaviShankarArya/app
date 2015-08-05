@@ -53,4 +53,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # Authentication related
+  post 'api/v1/auth/users' => 'api/v1/auth/users#create'
 end
