@@ -56,4 +56,5 @@ Rails.application.routes.draw do
 
   # Authentication related
   post 'api/v1/auth/users' => 'api/v1/auth/users#create'
+  post 'api/v1/auth/sessions' => 'api/v1/auth/sessions#create'
 end
