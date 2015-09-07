@@ -25,7 +25,7 @@ module Api
         end
 
         def data_to_send(user)
-          attributes_to_send = ["first_name", "last_name", "email", "phone", "auth_token"]
+          attributes_to_send = ["first_name", "last_name", "email", "phone"]
           user.attributes.select { |key| attributes_to_send.include?(key) }
         end
       end
