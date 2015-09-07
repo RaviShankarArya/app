@@ -13,11 +13,22 @@ module Api
           end
         end
 
-        private
-        def session_params
-          params.permit(:email, :password)
-        end
+        def sign_out
+          user=User.find_by(:id => params[:id])
+          if user.present?
+           auth_token = user.authentication_token
+           auth_token.delete
+           render :status => 201, :json => {:message => ['signout']}
+         else
+          render :status => 422, :json => { :errors => {:message => ['you have to sign in first']} }
+         end
+       end
+
+       private
+       def session_params
+        params.permit(:email, :password)
       end
     end
   end
+end
 end

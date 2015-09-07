@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
 
+  has_one :authentication_token
+
   validates :first_name,
             :presence => true,
             :length =>{ :minimum => 3, :maximum => 12 },

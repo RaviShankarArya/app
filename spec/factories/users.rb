@@ -7,7 +7,6 @@ FactoryGirl.define do
     password "Password123"
     password_confirmation "Password123"
     phone "990-191-6142"
-    auth_token "MyString"
   end
 
 end

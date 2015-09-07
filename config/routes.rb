@@ -57,4 +57,7 @@ Rails.application.routes.draw do
   # Authentication related
   post 'api/v1/auth/users' => 'api/v1/auth/users#create'
   post 'api/v1/auth/sessions' => 'api/v1/auth/sessions#create'
+  post 'api/v1/auth/user/:id(.:format)/sign_out' => 'api/v1/auth/sessions#sign_out'
+  get 'api/v1/logged_in_users' => 'api/v1/users#index'
+  put 'api/v1/auth/password_resets' => 'api/v1/auth/password_resets#create'
 end
