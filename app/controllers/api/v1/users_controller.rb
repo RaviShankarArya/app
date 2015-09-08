@@ -2,7 +2,7 @@ module Api
   module V1
     class UsersController < SecureController
       def index
-        users=User.all
+        users=User.where("user_status = ?",true)
         render :status => 200, :json => users
       end
     end
