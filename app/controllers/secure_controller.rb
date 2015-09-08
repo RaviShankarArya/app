@@ -11,14 +11,12 @@ class SecureController < ApplicationController
       access_time = auth_token.access_time
       session_time = TimeDifference.between(access_time, Time.now).in_minutes
       if session_time >= 1
-        binding.pry
         auth_token.auth_token = nil
         auth_token.access_time = nil
         auth_token.user.user_status=false
         auth_token.user.save(:validate => false)
         render :json => {:message => ['your session has expired please login']}, :status => 403
       else
-        binding.pry
         auth_token.access_time = Time.now
       end
       auth_token.save
